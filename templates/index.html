@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veritas | Advanced Fake News Detection</title>
+    <meta name="description" content="AI-powered fake news detector using advanced NLP and machine learning to analyze the authenticity of news articles.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="background-wrapper">
+        <div class="ambient-light main-light"></div>
+        <div class="ambient-light secondary-light"></div>
+        <div class="grid-overlay"></div>
+        <div class="noise-overlay"></div>
+        
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    
+    <main class="container">
+        <header class="app-header">
+            <div class="logo-wrapper">
+                <i class="ph ph-shield-check logo-icon"></i>
+                <h1 class="logo">Veri<span class="highlight">tas</span></h1>
+            </div>
+            <p class="subtitle">Next-Gen Truth Detection Engine</p>
+        </header>
+
+        <section class="glass-panel main-panel">
+            <div class="panel-header">
+                <h2>Analyze Content</h2>
+                <div class="status-indicator">
+                    <span class="pulse-dot"></span>
+                    <span class="status-text">System Ready</span>
+                </div>
+            </div>
+
+            <form id="detection-form">
+                <div class="input-wrapper">
+                    <label for="headline">Article Headline</label>
+                    <div class="input-container">
+                        <i class="ph ph-text-h icon"></i>
+                        <input type="text" id="headline" name="headline" placeholder="Enter the exact headline..." required autocomplete="off">
+                    </div>
+                </div>
+                
+                <div class="input-wrapper">
+                    <label for="news">Article Content</label>
+                    <div class="input-container textarea-container">
+                        <i class="ph ph-article icon"></i>
+                        <textarea id="news" name="news" rows="6" placeholder="Paste the full body of the news article here for comprehensive analysis..." required></textarea>
+                    </div>
+                </div>
+                
+                <div class="action-area">
+                    <button type="submit" id="submit-btn" class="btn-primary">
+                        <span class="btn-content">
+                            <i class="ph ph-scan"></i>
+                            <span class="btn-text">Initiate Scan</span>
+                        </span>
+                        <div class="scanner-line hidden"></div>
+                        <span class="loader hidden"></span>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section id="result-section" class="glass-panel result-panel hidden">
+            <div class="result-content">
+                <div class="result-icon-wrapper">
+                    <i id="result-icon" class="ph"></i>
+                </div>
+                <div class="result-details">
+                    <h2 class="result-title">Analysis Complete</h2>
+                    <div id="result-badge" class="badge"></div>
+                    <p id="result-message"></p>
+                </div>
+            </div>
+            
+            <div class="confidence-meter hidden">
+                <div class="meter-label">
+                    <span>Confidence Score</span>
+                    <span class="score-value">98%</span>
+                </div>
+                <div class="meter-bar">
+                    <div class="meter-fill" style="width: 98%;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <p>Powered by Advanced Machine Learning &bull; Natural Language Processing</p>
+        <p class="disclaimer"><i class="ph ph-warning-circle"></i> Disclaimer: This model can make mistakes. Please verify important information independently.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
