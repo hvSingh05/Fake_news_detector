@@ -34,11 +34,10 @@ A machine learning system designed to identify and classify potentially false or
     - Stop words removal
     - Stemming
     - Vectorization using Bag of n-grams (bag of words, bi-grams, tri-grams)
-3. 
-4. Model Building:
+3. Model Building:
    - Logistic Regression
    - Multiomial Naive Bayes
-5. Model Evaluation (F1-Score, precision score and accuracy score)
+4. Model Evaluation (F1-Score, precision score and accuracy score)
 
 
 ## Results 📈
