@@ -1,49 +1,48 @@
 
-# Fake News Detector
+# Fake News Detector 📰
 
 A machine learning system designed to identify and classify potentially false or misleading information.
 
-## Features
+## Dataset 📊
+- Source: Kaggle
+- Features include:
+  - Headline
+  - News
 
+## Objectives 🎯
+
+- Perform data cleaning and preprocessing
 - News classification and analysis
-- Credibility assessment
-- Source verification
+- Conduct exploratory data analysis (EDA)
+- Build and evaluate multiple classification models
 
-## Getting Started
+## Tech Stack 🛠️
+- Python
+- NumPy
+- Pandas
+- Matplotlib / Seaborn
+- Scikit-learn
+- Jupyter Notebook
 
-### Prerequisites
 
-- Python 3.8+
-- Required dependencies listed in `requirements.txt`
+## Workflow 🏗️
+1. Data Cleaning (handling missing values)
+2. NLP based text preprocessing:
+    - Removal of HTML tags and URLs
+    - Removal of puntuation marks
+    - Tokenization
+    - Stop words removal
+    - Stemming
+    - Vectorization using Bag of n-grams (bag of words, bi-grams, tri-grams)
+3. 
+4. Model Building:
+   - Logistic Regression
+   - Multiomial Naive Bayes
+5. Model Evaluation (F1-Score, precision score and accuracy score)
 
-### Installation
 
-```bash
-git clone https://github.com/hvSingh05/Fake_news_detector.git
-cd Fake_news_detector
-pip install -r requirements.txt
-```
+## Results 📈
+- Best Model: Logistic Regression using Bag-of-bigrams vectorizer
+- F1-Score: 96%
+- Precision: 97% for real news and 95% for fake news
 
-### Usage
-
-```bash
-python main.py
-```
-
-## Project Structure
-
-```
-Fake_news_detector/
-├── data/
-├── models/
-├── src/
-└── README.md
-```
-
-## Contributing
-
-Feel free to submit issues and pull requests.
-
-## License
-
-[Add your license here]
